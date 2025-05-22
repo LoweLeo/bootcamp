@@ -44,8 +44,27 @@ body {
   }
 }
 
-.sidebar .sidebar-header:hover > .header-options {
-  display: block;
+.sidebar .header-options {
+  display: none;
+  padding: 8px 12px;
+  border-radius: 16px;
+}
+
+.sidebar .header-options ul {
+  background-color: white;
+  border-radius: 16px;
+  padding: 16px;
+  width: 300px;
+}
+
+.sidebar .sidebar-header:hover .header-options {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 0px 34px;
+
+  position: absolute;
+  left: 64px;
+  top: 16px;
 }
 
 li {
@@ -86,6 +105,10 @@ li {
   }
 }
 
+.options-item:hover {
+  background-color: #f3f1ff;
+}
+
 .tooltip {
   opacity: 0;
   transition: all 0.3s;
@@ -107,18 +130,6 @@ li {
   &.tooltip {
     background-color: rgba(0, 0, 0, 0.829);
   }
-}
-
-.sidebar .header-options {
-  display: none;
-  background: white;
-  width: 300px;
-  padding: 8px 12px;
-  border-radius: 16px;
-
-  position: absolute;
-  left: 90px;
-  top: 0px;
 }
 
 .sidebar-menu .menu-item {
@@ -198,13 +209,33 @@ footer {
 
 .user .user-options {
   display: none;
-  background: white;
-  width: 250px;
-  border-radius: 16px;
 
   position: absolute;
   left: 90px;
   bottom: 0px;
+}
+
+.user .user-options {
+  display: none;
+  padding: 8px 12px;
+  border-radius: 16px;
+}
+
+.user .user-options ul {
+  background-color: white;
+  border-radius: 16px;
+  padding: 8px;
+  width: 250px;
+}
+
+.sidebar .user:hover .user-options {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 0px 34px;
+
+  position: absolute;
+  left: 64px;
+  bottom: 0;
 }
 
 .user .user-options .user-header {
