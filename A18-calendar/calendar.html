@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VanillaHR Calendar</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <header class="sidebar-header">
+          <img src="images/vanilla-logo.png" alt="vanilla-logo" />
+          <h2>VanillaHR</h2>
+        </header>
+        <nav>
+          <div class="input-wrapper">
+            <span class="material-symbols-outlined"> search </span>
+            <input type="text" placeholder="Search" />
+          </div>
+          <div class="sidebar-section">
+            <a href="#"
+              ><span class="material-symbols-outlined"> dashboard </span
+              >Dashboard</a
+            >
+            <a href="#"
+              ><span class="material-symbols-outlined"> work </span>Jobs</a
+            >
+            <a href="#"
+              ><span class="material-symbols-outlined"> badge </span
+              >Candidates</a
+            >
+            <a href="#"
+              ><span class="material-symbols-outlined"> calendar_month </span
+              >Calendar</a
+            >
+          </div>
+          <div class="sidebar-section">
+            <a href="#"
+              ><span class="material-symbols-outlined"> account_circle </span
+              >Account</a
+            >
+            <a href="#"
+              ><span class="material-symbols-outlined"> receipt_long </span
+              >Billing</a
+            >
+            <a href="#"
+              ><span class="material-symbols-outlined"> settings </span
+              >Settings</a
+            >
+            <a href="#"
+              ><span class="material-symbols-outlined"> support_agent </span
+              >Support</a
+            >
+          </div>
+          <footer class="sidebar-footer">
+            <a href="#"
+              ><span class="material-symbols-outlined"> manage_accounts </span
+              >Admin</a
+            >
+            <a href="#"
+              ><span class="material-symbols-outlined"> logout </span>Logout</a
+            >
+          </footer>
+        </nav>
+      </aside>
+      <main class="calendar-section">
+        <header class="calendar-header">
+          <div class="header-filter">
+            <h1>Calendar</h1>
+            <select name="filter" id="filter" class="select">
+              <button>
+                <selectedcontent class="option"></selectedcontent>
+              </button>
+              <option value="1" class="option">All Meetings</option>
+              <option value="2" class="option">Scheduled</option>
+              <option value="3" class="option">Empty</option>
+            </select>
+          </div>
+          <button class="create-btn">Create a Meeting</button>
+        </header>
+        <div class="calendar-days">
+          <div class="button">
+            <span class="material-symbols-outlined chevron">
+              chevron_left
+            </span>
+          </div>
+          <div class="date"><span>Sep</span>19<span>MON</span></div>
+          <div class="date"><span>Sep</span>20<span>TUE</span></div>
+          <div class="date"><span>Sep</span>21<span>WED</span></div>
+          <div class="date"><span>Sep</span>22<span>THU</span></div>
+          <div class="date"><span>Sep</span>23<span>FRI</span></div>
+          <div class="date"><span>Sep</span>24<span>SAT</span></div>
+          <div class="date"><span>Sep</span>25<span>SUN</span></div>
+          <div class="button">
+            <span class="material-symbols-outlined chevron">
+              chevron_right
+            </span>
+          </div>
+        </div>
+        <div class="calendar-wrapper">
+          <div class="calendar-grid">
+            <div class="column-day">07:00 AM</div>
+            <div class="day">
+              <div id="default" class="calendar-card">
+                <div class="card-heading">
+                  <img
+                    src="https://wallpapers.com/images/hd/women-profile-pictures-2400-x-1600-n2or9xbo3q54wblo.jpg"
+                    alt="sam-image"
+                  /><span class="material-symbols-outlined">
+                    check_circle
+                  </span>
+                </div>
+                <span class="card-hour">07:30 AM</span>
+                <span class="card-user">Meeting with Sam</span>
+              </div>
+            </div>
+            <div class="day">
+              <div id="default" class="calendar-card">
+                <div class="card-heading">
+                  <img
+                    src="https://wallpapers.com/images/hd/women-profile-pictures-2400-x-1600-n2or9xbo3q54wblo.jpg"
+                    alt="sam-image"
+                  /><span class="material-symbols-outlined">
+                    check_circle
+                  </span>
+                </div>
+                <span class="card-hour">07:30 AM</span>
+                <span class="card-user">Meeting with Sam</span>
+              </div>
+            </div>
+            <div class="day"></div>
+            <div class="day">
+              <div id="blue" class="calendar-card">
+                <div class="card-heading">
+                  <img
+                    src="https://wallpapers.com/images/hd/women-profile-pictures-2400-x-1600-n2or9xbo3q54wblo.jpg"
+                    alt="sam-image"
+                  /><span class="material-symbols-outlined">
+                    check_circle
+                  </span>
+                </div>
+                <span class="card-hour">07:30 AM</span>
+                <span class="card-user">Meeting with Sam</span>
+              </div>
+            </div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day">
+              <div id="cyan" class="calendar-card">
+                <div class="card-heading">
+                  <img
+                    src="https://wallpapers.com/images/hd/women-profile-pictures-2400-x-1600-n2or9xbo3q54wblo.jpg"
+                    alt="sam-image"
+                  /><span class="material-symbols-outlined">
+                    check_circle
+                  </span>
+                </div>
+                <span class="card-hour">07:30 AM</span>
+                <span class="card-user">Meeting with Sam</span>
+              </div>
+            </div>
+            <div class="day"></div>
+            <div class="column-day">08:00 AM</div>
+            <div class="day"></div>
+            <div class="day">
+              <div id="orange" class="calendar-card">
+                <div class="card-heading">
+                  <img
+                    src="https://wallpapers.com/images/hd/women-profile-pictures-2400-x-1600-n2or9xbo3q54wblo.jpg"
+                    alt="sam-image"
+                  /><span class="material-symbols-outlined">
+                    check_circle
+                  </span>
+                </div>
+                <span class="card-hour">08:30 AM</span>
+                <span class="card-user">Meeting with Sam</span>
+              </div>
+            </div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day">
+              <div id="green" class="calendar-card">
+                <div class="card-heading">
+                  <img
+                    src="https://wallpapers.com/images/hd/women-profile-pictures-2400-x-1600-n2or9xbo3q54wblo.jpg"
+                    alt="sam-image"
+                  /><span class="material-symbols-outlined">
+                    check_circle
+                  </span>
+                </div>
+                <span class="card-hour">08:30 AM</span>
+                <span class="card-user">Meeting with Sam</span>
+              </div>
+            </div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="column-day">09:00 AM</div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="column-day">10:00 AM</div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day"></div>
+            <div class="day">
+              <div id="red" class="calendar-card">
+                <div class="card-heading">
+                  <img
+                    src="https://wallpapers.com/images/hd/women-profile-pictures-2400-x-1600-n2or9xbo3q54wblo.jpg"
+                    alt="sam-image"
+                  /><span class="material-symbols-outlined">
+                    check_circle
+                  </span>
+                </div>
+                <span class="card-hour">08:30 AM</span>
+                <span class="card-user">Meeting with Sam</span>
+              </div>
+            </div>
+            <div class="day"></div>
+            <div class="day"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
