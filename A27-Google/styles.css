@@ -8,11 +8,12 @@
 }
 
 body {
+  justify-content: space-between;
   background-color: white;
   flex-direction: column;
   text-align: center;
-  min-width: 350px;
-  height: 100vh;
+  min-height: 100vh;
+  min-width: 400px;
   display: flex;
 }
 
@@ -67,50 +68,61 @@ header .user img {
 /* Main */
 
 main {
+  place-items: center;
+  display: grid;
   padding: 16px;
-  height: 100%;
+  gap: 16px;
 }
 
-main .logo {
-  margin: 44px auto 16px auto;
+main {
+  padding: 40px 20px;
 }
 
 main .logo img {
-  max-height: 53px;
+  max-height: 90px;
   width: auto;
 }
 
 .search-box {
-  border: 1px solid #dfe1e5;
-  background-color: white;
   align-items: center;
-  border-radius: 24px;
-  max-width: 736px;
-  margin: 0 auto;
+  position: relative;
+  min-width: 360px;
   display: flex;
-  height: 38px;
-}
-
-.search-box span {
-  padding: 4px 14px;
-  font-size: 20px;
-}
-
-.search-box span:first-child {
-  color: #a3a3a3;
 }
 
 .search-box input {
-  font-size: 16px;
-  padding: 0 10px;
-  outline: none;
-  border: none;
+  background-color: transparent;
+  border: 1px solid #dfe1e5;
+  padding: 0 0 0 3rem;
+  border-radius: 24px;
+  height: 48px;
   width: 100%;
+  z-index: 1;
+}
+
+.search-box span {
+  position: absolute;
+  font-size: 24px;
+
+  &.search {
+    color: #70757a;
+    z-index: 0;
+    left: 1rem;
+  }
+
+  &.mic {
+    left: 17rem;
+    z-index: 1;
+  }
+
+  &.photo {
+    left: 20rem;
+    z-index: 1;
+  }
 }
 
 .buttons {
-  margin-top: 19px;
-  display: none;
+  margin-top: 3px;
 }
 
 .buttons button {
@@ -125,6 +137,15 @@ main .logo img {
 
 .buttons button:hover {
   background-color: #e8e8e8;
+}
+
+.language {
+  font-size: 0.9rem;
+
+  & a {
+    text-decoration: none;
+    color: blue;
+  }
 }
 
 /* Footer */
@@ -189,24 +210,30 @@ footer {
     text-decoration: underline;
   }
 
-  main .logo {
-    margin: 188px auto 22px;
-  }
-
   main .logo img {
     max-height: 92px;
     width: auto;
   }
 
-  .search-box {
+  .search-box input {
     box-shadow: 0px 2px 8px 0px rgba(60, 64, 67, 0.25);
-    max-width: 584px;
-    height: 48px;
+    min-width: 580px;
   }
 
-  .search-box span:nth-child(1n + 2) {
-    padding-left: 6px;
-    font-size: 23px;
+  .search-box span {
+    &.mic {
+      cursor: pointer;
+      left: 30rem;
+    }
+
+    &.photo {
+      cursor: pointer;
+      left: 33rem;
+    }
+  }
+
+  .search-box input:focus {
+    outline: none;
   }
 
   .buttons {
