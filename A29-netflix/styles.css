@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-image: url(images/hero-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  color: white;
+}
+
+header {
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  padding: 24px 40px;
+  display: grid;
+}
+
+header .logo img {
+  height: 38px;
+}
+
+header .menu {
+  padding-left: 24px;
+  display: flex;
+  gap: 20px;
+}
+
+header .menu a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 450;
+  color: white;
+}
+
+header .actions {
+  padding-right: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+header .actions span {
+  font-size: 1.5rem;
+}
+
+header .auth a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+}
+
+main {
+  background: linear-gradient(to top, rgb(27, 34, 48), rgba(20, 20, 20, 0));
+  grid-template-columns: 1fr auto;
+  align-items: flex-end;
+  padding: 50px 90px;
+  height: 90.5vh;
+  display: grid;
+  width: 100%;
+}
+
+main section:last-child {
+  position: relative;
+  left: 150px;
+}
+
+section h1 {
+  margin-bottom: 15px;
+  font-size: 5rem;
+}
+
+section .details {
+  align-items: center;
+  margin-bottom: 36px;
+  font-size: 1rem;
+  color: white;
+  display: flex;
+  gap: 14px;
+}
+
+section .details .ratings {
+  padding-right: 24px;
+  font-size: 1.3rem;
+}
+
+section .description {
+  margin-bottom: 70px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+section .buttons {
+  display: flex;
+  gap: 20px;
+}
+
+section .buttons button {
+  border-radius: 8px;
+  padding: 16px 38px;
+  font-size: 1.2rem;
+  min-width: 200px;
+  cursor: pointer;
+  border: none;
+}
+
+section .buttons .play {
+  background-color: #1e90ff;
+  color: white;
+}
+
+section .buttons .trailer {
+  background-color: #555555af;
+  color: white;
+}
+
+section .posters h2,
+section .casting h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.poster-thumbs {
+  display: flex;
+  gap: 20px;
+}
+
+.poster-thumbs img {
+  border-radius: 5px;
+  object-fit: cover;
+  height: 100px;
+  width: 150px;
+}
+
+section .posters {
+  padding-bottom: 50px;
+}
+
+section .posters,
+section .casting {
+  flex-direction: column;
+  display: flex;
+  gap: 16px;
+}
+
+section .casting .actor-list {
+  display: flex;
+  gap: 20px;
+}
+
+section .casting .actor-list .actor {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  width: 65px;
+  gap: 6px;
+}
+
+section .casting .actor-list .actor span {
+  font-size: 0.8rem;
+  text-align: center;
+  display: block;
+}
+
+.actor img {
+  border-radius: 50%;
+  object-fit: cover;
+  height: 56px;
+  width: 56px;
+}
