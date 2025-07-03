@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #000b19;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 16px;
+  display: flex;
+}
+
+main {
+  max-width: 400px;
+  width: 100%;
+}
+
+.card {
+  background: linear-gradient(to bottom, #5ac5f3, #2470a3);
+  border-radius: 48px;
+  padding: 32px;
+}
+
+.card-heading {
+  grid-template-columns: auto 1fr auto;
+  display: grid;
+
+  &.card-heading a {
+    color: white;
+  }
+}
+
+.icon-button {
+  background: none;
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+
+.days-details {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 4px;
+}
+
+.days-details span:first-child {
+  font-size: 1rem;
+}
+
+.days-details span:last-child {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.summary {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.178);
+  align-items: center;
+  padding: 16px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.weather-icon {
+  font-size: 5rem;
+}
+
+.summary-info {
+  flex-direction: column;
+  display: flex;
+  gap: 2px;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.temperature {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.sub {
+  color: rgba(255, 255, 255, 0.637);
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.637);
+  font-size: 0.8rem;
+}
+
+.hourly-weather {
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+.weather-time {
+  flex-direction: column;
+  align-items: center;
+  padding: 0 8px;
+  display: flex;
+  gap: 6px;
+
+  &.weather-time span:first-child {
+    font-size: 1.5rem;
+  }
+
+  &.weather-time span:nth-child(2n) {
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+
+  &.weather-time span:last-child {
+    color: rgba(255, 255, 255, 0.644);
+    font-size: 0.7rem;
+  }
+}
+
+.weekly-container {
+  padding: 24px 36px;
+}
+
+.daily {
+  flex-direction: column;
+  display: flex;
+  gap: 24px;
+}
+
+.day {
+  color: rgba(255, 255, 255, 0.521);
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: flex;
+
+  & .weather-container {
+    display: flex;
+    gap: 6px;
+  }
+
+  & .weather-container,
+  .temp-container span:first-child {
+    color: white;
+  }
+}
